@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital@1&family=Raleway:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.top_header, .top_header a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background: url(../img/header-fade-bg.png) bottom center no-repeat,
+                url(../img/header-bg.png) top center no-repeat;
+    background-size: cover;
+    padding: 30px 0 0;
+    height: 700px;
+}
+
+header, header a {
+    color: #000;
+}
+
+.top_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo, .nav, .social {
+    display: inline-block;
+}
+
+.logo a {
+    font-weight: bold;
+    font-size: 34px;
+}
+
+.nav ul {
+    padding-top: 4px;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 6px 10px;
+}
+
+nav li a:hover {
+    color: #fff;
+    transition: 0.2s;
+}
+
+.selected {
+    background-color: #00b0ff;
+    color: #fff;
+}
+
+.social {
+    min-width: 137px;
+}
+
+.social li {
+    display: inline;
+}
+
+.social li:not(:last-child) {
+    padding-right: 10px;
+}
+
+.social li a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-image: url(../img/sprites_social.png);
+    background-repeat: no-repeat;
+}
+
+.social li:nth-child(1) a {
+    background-position: -2px 0px;
+}
+
+.social li:nth-child(2) a {
+    background-position: -42px 0px;
+}
+
+.social li:nth-child(3) a {
+    background-position: -82px 0px;
+}
+
+.motto-header {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    padding: 126px 0;
+    position: relative;
+}
+
+.motto-header h2 {
+    color: #000;
+    font-size: 50px;
+    padding: 10px;
+}
+
+.motto-header h3 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.card {
+    width: 88%;
+    height: auto;
+    background: #fff url(../img/card-bg.png) top left no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3%;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, .75);
+    overflow: hidden;
+}
+
+.gallery {
+    width: 54%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-right: 4%;
+}
+
+.gallery .front-img, .selection  {
+    margin: auto;
+    display: inline-block;
+}
+
+.gallery .front-img {
+    width: 325px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery .front-img img {
+    width: 100%;
+    height: auto;
+}
+
+.selection {
+    margin-left: 4%;
+    width: 13%;
+}
+
+.selection img {
+    border: 1px solid #cccccc;
+    background-color: #fff;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.selection img:not(:last-child) {
+    margin-bottom: 4px;
+}
+
+.selection img:hover {
+    border: 3px solid #00b0ff;
+    cursor: pointer;
+}
+
+.selection img {
+    display: block;
+}
+
+.information {
+    width: 46%;
+    color: #787878;
+    font-size: 16px;
+}
+
+.information h4 {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+}
+
+.information .rate {
+    font-weight: bold;
+    margin: 16px 0 0 0;
+}
+
+.information .rate span {
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    background: url(../img/badStar.png) center no-repeat;
+    cursor: pointer;
+}
+
+.information .rate span.topStar {
+    background: url(../img/topStar.png) center no-repeat;
+}
+
+.tab_links {
+    display: flex;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 40px 0 10px 0;
+}
+
+.tab-link {
+    flex: 0 1 33.333%;
+    justify-content: center;
+    justify-items: center;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.tab-link:not(:last-child) {
+    margin-right: 2%;
+}
+
+.tabs_block, .tabs_block a {
+    font-family: 'Raleway', sans-serif;
+}
+
+.tabs_block a {
+    font-weight: bold;
+    color: #000;
+}
+
+.tab-content {
+    padding: 26px 0 40px 0;
+    line-height: 21px;
+    display: none;
+    position: relative;
+}
+
+.tab-content:target {
+    display: block;
+}
+
+.tab-content:before {
+    content: "";
+    height: 50px;
+    width: 33.333%;
+    border-bottom: 3px solid #00b0ff;
+    position: absolute;
+    top: -15%;
+}
+
+.tab-content:nth-child(2):before {
+    left: 33.333%;
+    top: -25%;
+}
+
+.tab-content:nth-child(3):before {
+    right: 0%;
+    top: -15%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    margin-top: 360px;
+    background-size: contain;
+    background: url(../img/footer_bg.jpg) center no-repeat;
+    height: 640px;
+}
+
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (max-width: 1024px) {
+
+    .top_header {
+        display: block;
+    }
+
+    .nav {
+        display: block;
+        width: 90%;
+        padding: 26px 0;
+        margin: 0 auto;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social {
+        position: absolute;
+        top: 32px;
+        right: 18px;
+    }
+
+    .motto-header {
+        padding: 70px 0;
+    }
+
+}    
+
+/* TABLETS PORTRAIT */
+@media only screen and (max-width: 768px) {
+
+    .motto-header {
+        padding: 54px 0;
+    }
+
+    .motto-header h2 {
+        font-size: 44px;
+    }
+
+    .card {
+        top: 44%;
+    }
+
+}
+
+
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (max-width: 700px) {
+
+    .motto-header {
+        padding: 10px 0;
+    }
+
+    .motto-header h2 {
+        font-size: 40px;
+    }
+
+    .motto-header h3 {
+        font-size: 22px;
+    }
+
+    .nav {
+        padding: 40px 0 20px 0;
+    }
+
+    .nav ul {
+        display: block;
+    }
+
+    .nav li {
+        text-align: center;
+    }
+
+    .nav li a {
+        display: block;
+        width: 90%;
+        margin: 2px 0;
+    }
+
+    .card {
+        top: 52%;
+    }
+
+}
+
+
+@media only screen and (max-width: 660px) {
+
+    .motto-header h2 {
+        font-size: 34px;
+    }
+
+    .motto-header h3 {
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .top_header h1 {
+        text-align: center;
+    }
+
+    .top_header .social {
+        top: 100px;
+        right: 50%;
+        transform: translate(50%, 0);
+    }
+
+    .top_header h1, .top_header .social {
+        display: block;
+    }
+
+    .top_header h1 a {
+        font-size: 48px;
+    }
+
+    .nav {
+        margin: 44px auto 0 auto;
+    }
+
+    .social li a {
+        margin: 0 6px;
+    }
+
+    .motto-header {
+        padding: 10px 0;
+    }
+
+    .motto-header h2 {
+        font-size: 26px;
+    }
+
+    .motto-header h3 {
+        font-size: 18px;
+    }
+
+    .card {
+        top: 60%;
+    }
+
+}
